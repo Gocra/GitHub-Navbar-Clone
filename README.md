@@ -18,4 +18,4 @@ Made with
 
 ## Demo
 
-<img src="/demo/image.png" alt="GitHub Navbar Clone" />
+<img src="/demo/image.PNG" alt="GitHub Navbar Clone" />
