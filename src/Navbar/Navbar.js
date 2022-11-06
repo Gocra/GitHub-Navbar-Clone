@@ -72,10 +72,7 @@ const Navbar = () => {
         </LogoContainer>
         <NavbarMain>
           <Section>
-            <NavbarDropdown>Product</NavbarDropdown>
-            <NavbarDropdown>Solutions</NavbarDropdown>
-            <NavbarDropdown>Open Source</NavbarDropdown>
-            <NavItem>Pricing</NavItem>
+            <NavbarDropdown />
           </Section>
           <Section>
             <SearchBar />

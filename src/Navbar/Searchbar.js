@@ -37,8 +37,8 @@ const SearchBar = () => {
 
   useEffect(() => {
     window.addEventListener("keypress", (e) => {
-      e.preventDefault();
-      if (e.key === "/") {
+      if (e.key === "/" && document.activeElement != inputRef.current) {
+        e.preventDefault();
         inputRef.current.focus();
       }
     });
