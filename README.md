@@ -19,5 +19,5 @@ Had trouble trying to make the navbar code using mapping so had to write it myse
 ## Demo
 
 <img src="/demo/navbar.PNG" width="100%" alt="GitHub Navbar Clone" />
-<img src="/demo/product-dropdown.PNG" width="100%" alt="Product Dropdown">
-<img src="/demo/opensource-dropdown.PNG" width="100%" alt="Open Source Dropdown">
+<img src="/demo/product-dropdown.png" width="100%" alt="Product Dropdown">
+<img src="/demo/opensource-dropdown.png" width="100%" alt="Open Source Dropdown">
