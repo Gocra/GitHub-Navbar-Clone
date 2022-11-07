@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import SearchBar from "./Searchbar";
-import NavbarDropdown, { NavItem } from "./NavbarDropdown";
+import Hamburger from "../Hamburger/Hamburger";
+import { MobileView, DesktopView } from "../View/View";
+import NavbarDropdown from "./NavbarDropdown";
 import { LogoSVG } from "../svgs";
 
 const Nav = styled.nav`
@@ -30,13 +32,6 @@ const Logo = styled.a`
   cursor: pointer;
 `;
 
-const NavbarMain = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-`;
-
 const AuthButton = styled.a`
   background: none;
   color: white;
@@ -63,23 +58,38 @@ const Section = styled.div`
   align-items: center;
 `;
 
+const NavbarMain = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
 const Navbar = () => {
   return (
     <Nav>
       <Container>
+        <MobileView>
+          <SignUpButton>Sign up</SignUpButton>
+        </MobileView>
         <LogoContainer>
           <Logo>{LogoSVG}</Logo>
         </LogoContainer>
-        <NavbarMain>
-          <Section>
-            <NavbarDropdown />
-          </Section>
-          <Section>
-            <SearchBar />
-            <SignInButton>Sign in</SignInButton>
-            <SignUpButton>Sign up</SignUpButton>
-          </Section>
-        </NavbarMain>
+        <DesktopView style={{ width: "100%" }}>
+          <NavbarMain>
+            <Section>
+              <NavbarDropdown />
+            </Section>
+            <Section>
+              <SearchBar />
+              <SignInButton>Sign in</SignInButton>
+              <SignUpButton>Sign up</SignUpButton>
+            </Section>
+          </NavbarMain>
+        </DesktopView>
+        <MobileView>
+          <Hamburger />
+        </MobileView>
       </Container>
     </Nav>
   );
