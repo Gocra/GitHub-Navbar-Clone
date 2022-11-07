@@ -4,6 +4,7 @@ import Hamburger from "../Hamburger/Hamburger";
 import { MobileView, DesktopView } from "../View/View";
 import NavbarDropdown from "./NavbarDropdown";
 import { LogoSVG } from "../svgs";
+import { useState } from "react";
 
 const Nav = styled.nav`
   height: 72px;
@@ -39,6 +40,10 @@ const AuthButton = styled.a`
   cursor: pointer;
   font-size: 16px;
   line-height: 1.5;
+  transition: opacity 125ms ease-in;
+  &:hover {
+    opacity: 0.75;
+  }
 `;
 
 const SignInButton = styled(AuthButton)`
@@ -66,6 +71,8 @@ const NavbarMain = styled.div`
 `;
 
 const Navbar = () => {
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+
   return (
     <Nav>
       <Container>
@@ -88,7 +95,10 @@ const Navbar = () => {
           </NavbarMain>
         </DesktopView>
         <MobileView>
-          <Hamburger />
+          <Hamburger
+            isOpen={isMobileDropdownOpen}
+            setIsOpen={setIsMobileDropdownOpen}
+          />
         </MobileView>
       </Container>
     </Nav>

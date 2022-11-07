@@ -14,6 +14,7 @@ const Icon = styled.div`
   height: 22px;
   display: flex;
   width: 22px;
+  align-items: center;
   flex-direction: column;
   justify-content: space-around;
 `;
@@ -24,15 +25,30 @@ const Line = styled.div`
   background-color: #fff;
   margin-top: 2px;
   border-radius: 6px;
+  transition: all 200ms;
 `;
 
-const Hamburger = () => {
+const Line1 = styled(Line)`
+  ${(props) =>
+    props.active ? `transform: rotateZ(-45deg); margin-right:7px;` : ""};
+`;
+
+const Line2 = styled(Line)`
+  ${(props) => (props.active ? `transform: scale(0);` : "")};
+`;
+
+const Line3 = styled(Line)`
+  ${(props) =>
+    props.active ? `transform: rotateZ(45deg); margin-right:7px;` : ""};
+`;
+
+const Hamburger = ({ isOpen, setIsOpen }) => {
   return (
-    <Container>
+    <Container onClick={() => setIsOpen(!isOpen)}>
       <Icon>
-        <Line />
-        <Line />
-        <Line />
+        <Line1 active={isOpen} style={{ transformOrigin: "top right" }} />
+        <Line2 active={isOpen} />
+        <Line3 active={isOpen} style={{ transformOrigin: "bottom right" }} />
       </Icon>
     </Container>
   );
