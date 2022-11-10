@@ -26,11 +26,13 @@ const Dropdown = styled.div`
   left: -10%;
   background-color: white;
   border-radius: 6px;
-  opacity: 0;
-  transform: translateY(-7px);
-  transition: transform 250ms;
-  pointer-events: none;
   color: #24292f;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 150ms;
+  pointer-events: none;
+  transform-origin: top center;
+  scale: 0.95;
 
   box-shadow: 0 5px 30px rgba(27, 31, 35, 0.1), 0 0 1px rgba(27, 31, 35, 0.4),
     0 1px 2px rgba(27, 31, 35, 0.15);
@@ -157,6 +159,10 @@ export const NavItem = styled.div`
     opacity: 1;
     transform: translateY(0%);
     pointer-events: all;
+    scale: 1;
+  }
+  &:not(:hover) ${Dropdown} {
+    transition: all 0ms;
   }
 `;
 

@@ -15,12 +15,6 @@ in progress
 - overlay for mobile dropdown
 - onclick overlay - close dropdown
 - use data object to have navbar map itself
-- scale on dropdown
-
-```css
-transform: scale(1.4);
-transform-origin: top center;
-```
 
 ## Demo
 
