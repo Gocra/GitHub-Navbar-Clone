@@ -1,11 +1,16 @@
 import "./App.css";
-import Navbar from "./Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
+import styled from "styled-components";
+
+const AppStyled = styled.div`
+  background-color: #0d1117;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <AppStyled>
       <Navbar />
-    </div>
+    </AppStyled>
   );
 }
 

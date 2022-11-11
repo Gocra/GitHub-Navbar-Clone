@@ -12,9 +12,6 @@ in progress
 ## Todo
 
 - dropdown for mobile using hamburger button
-- overlay for mobile dropdown
-- onclick overlay - close dropdown
-- use data object to have navbar map itself
 
 ## Demo
 
