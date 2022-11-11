@@ -3,6 +3,7 @@ import SearchBar from "./Searchbar";
 import Hamburger from "../Hamburger/Hamburger";
 import { MobileView, DesktopView } from "../View/View";
 import NavbarDropdown from "./NavbarDropdown";
+import MobileDropdown from "./MobileDropdown";
 import { LogoSVG } from "../../svgs";
 import { useState } from "react";
 import Overlay from "../Overlay";
@@ -11,6 +12,7 @@ const Nav = styled.nav`
   height: 72px;
   padding: 16px 0px;
   width: 100vw;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -84,7 +86,7 @@ const Navbar = () => {
         <LogoContainer>
           <Logo>{LogoSVG}</Logo>
         </LogoContainer>
-        <DesktopView style={{ width: "100%" }}>
+        <DesktopView style={{ width: "100%", color: "white" }}>
           <NavbarMain>
             <Section>
               <NavbarDropdown />
@@ -101,6 +103,7 @@ const Navbar = () => {
             isOpen={isMobileDropdownOpen}
             setIsOpen={setIsMobileDropdownOpen}
           />
+          {isMobileDropdownOpen && <MobileDropdown />}
         </MobileView>
       </Container>
     </Nav>

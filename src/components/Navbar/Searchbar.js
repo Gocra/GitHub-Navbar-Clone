@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { SearchbarSlashSVG } from "../../svgs";
 
-const SearchBox = styled.div`
+export const SearchBox = styled.div`
   height: 38px;
   border: 1px solid #57606a;
   background-color: rgba(46, 55, 74, 0.82);
@@ -14,7 +14,7 @@ const SearchBox = styled.div`
   width: 240px;
 `;
 
-const SearchInput = styled.input`
+export const SearchInput = styled.input`
   padding: 8px 12px;
   font-size: 14px;
   outline: none;
