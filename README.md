@@ -2,17 +2,12 @@
 
 ## Project Status
 
-in progress
+Finished
 
 ## Tech Stack
 
 - react
 - styled components
-
-## Todo
-
-- mobile popup animation
-- the 'goto' icons that pop out on hover
 
 ## Demo
 
